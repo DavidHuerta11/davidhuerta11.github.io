@@ -1,0 +1,309 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+// Buttons and Icons
+
+//-------------------------------ICONS---------------------------//
+.iconBtnSpacing {
+  padding-right: 0.5rem;
+}
+
+.icon-skills {
+  i.fab,
+  i.fas {
+    font-size: 4.5rem;
+    margin: 1rem;
+  }
+}
+
+.diamond {
+  position: relative;
+}
+
+.diamond::after {
+  content: "";
+  position: absolute;
+  border: 0.11rem solid $tertiaryColor;
+  border-radius: 0.3rem;
+  width: 7.5rem;
+  height: 7.5rem;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.icon-skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+  padding-right: 3rem;
+
+  div {
+    margin: 3rem;
+  }
+
+  h3 {
+    padding-top: 4rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border-bottom: 1px solid $tertiaryColor;
+  }
+}
+
+.icon-skills > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.icon-skills > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.icon-skills > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+#html5 {
+  i.fab {
+    color: #ff581a;
+  }
+}
+
+#css3 {
+  i.fab {
+    color: #4d4dff;
+  }
+}
+
+#js {
+  i.fab {
+    color: #f4f432;
+  }
+}
+
+#react {
+  i.fab {
+    color: #00eaff;
+  }
+}
+
+#python {
+  i.fab::before {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right bottom,
+      from(blue),
+      to(yellow)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+#dbms {
+  i.fas {
+    color: #adff2f;
+  }
+}
+
+//-------------------------------BUTTONS---------------------------//
+.button {
+  text-align: center;
+  color: white;
+  cursor: pointer;
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1.3em;
+  }
+}
+
+.btnWdth {
+  width: 10.5rem;
+  margin-right: 0.5rem;
+}
+
+.btnWdth2 {
+  width: 11rem;
+}
+
+.btnWdth3 {
+  width: 9.5rem;
+}
+
+.solid {
+  border: none;
+  border-radius: 0.2rem;
+  background-color: $tertiaryColor;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin-right: 0.5rem;
+}
+
+.hollow {
+  border: 2px solid $tertiaryColor;
+  border-radius: 0.2rem;
+}
+
+.hollow-2 {
+  border: 2px solid black;
+  border-radius: 0.2rem;
+}
+
+.solid:hover {
+  background-color: $secondaryColor;
+}
+
+.hollow:hover {
+  border-color: $secondaryColor;
+
+  .dark-text {
+    color: $secondaryColor;
+  }
+}
+
+.hollow-2:hover {
+  border-color: $secondaryColor;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+
+  .night-text {
+    color: $secondaryColor;
+  }
+}
+
+.light-text {
+  color: white;
+}
+
+.dark-text {
+  color: $tertiaryColor;
+}
+
+.night-text {
+  color: black;
+}
+
+.swing {
+  -webkit-transform: rotateZ(100deg);
+  -ms-transform: rotate(100deg);
+  transform: rotateZ(100deg);
+  -webkit-animation: three 1.6s infinite;
+  animation: three 1.6s infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes three {
+  0% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(40deg);
+    transform: rotateZ(40deg);
+  }
+}
+
+@keyframes three {
+  0% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(40deg);
+    transform: rotateZ(40deg);
+  }
+}
+
+//----------------------------------MEDIA QUERIES-----------------------------------//
+@media (max-width: $lg) {
+  .button {
+    a {
+      font-size: 1.15em;
+    }
+  }
+
+  .btnWdth {
+    width: 10rem;
+  }
+
+  .icon-skills {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: $md) {
+  .icon-skills {
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "html5 css3 js", "react python dbms";
+  }
+}
+
+@media (max-width: $sm) {
+  .button {
+    a {
+      font-size: 1.2em;
+    }
+  }
+
+  .btnWdth {
+    width: 9.5rem;
+  }
+  .btnWdth2 {
+    width: 10.3rem;
+  }
+
+  .icon-skills {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: $xs) {
+  .icon-skills {
+    i.fab,
+    i.fas {
+      font-size: 3.5rem;
+      margin: 1rem;
+    }
+
+    div {
+      margin: 0;
+      margin-bottom: 3rem;
+    }
+
+    h3 {
+      padding-top: 0;
+      margin-top: 2.5rem;
+    }
+  }
+
+  .diamond::after {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+}

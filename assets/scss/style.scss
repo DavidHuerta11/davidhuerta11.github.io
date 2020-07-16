@@ -1,0 +1,474 @@
+@import "_variables";
+@import "_reset";
+@import "_nav";
+@import "_misc";
+@import "_footer";
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+.x-padding-cover {
+  padding: 0 20% 0 10%;
+}
+.xy-padding {
+  padding: 4.5rem 10% 4.5rem 10%;
+}
+
+.section-title {
+  font-family: "Lato", sans-serif, "Ariel";
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: left;
+  margin-bottom: 1.8rem;
+}
+/*
+.href {
+   Works for fixed navigation 
+   offsets the href jumps to not block content 
+  border-top: 10vh solid transparent;
+  margin-top: -10vh;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}*/
+
+.cool-border {
+  position: relative;
+}
+
+.cool-border::after {
+  content: "";
+  position: absolute;
+  background-color: $tertiaryColor;
+  width: 20%;
+  height: 0.15rem;
+  bottom: -1.5rem;
+  left: 0;
+  -webkit-transform: skew(-50deg);
+  -ms-transform: skew(-50deg);
+  transform: skew(-50deg);
+}
+
+//---------------------------------COVER----------------------------------/
+#cover {
+  //background-color: $primaryColor;
+  background-image: url("../images/turquoise-lignes.jpg");
+  //background-image: url("../images/fondo-azul.jpg");
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-align: left;
+  padding-top: 45vh;
+
+  h1 {
+    font-size: 3.8rem;
+    line-height: 1.3em;
+    font-family: "Lato", sans-serif, "Ariel";
+    font-weight: 700;
+    //background-color: $secondaryColor;
+  }
+
+  .typewriter h1 {
+    border-right: 0.08em solid rgba(0, 255, 0, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .typewriter h1:nth-child(1) {
+    width: 41rem;
+    -webkit-animation: animated-typing 2s steps(40, end);
+    animation: animated-typing 2s steps(40, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+
+  .typewriter h1:nth-child(2) {
+    width: 44.3rem;
+    opacity: 0;
+    -webkit-animation: animated-typing2 2s steps(40, end),
+      blink 0.5s step-end infinite alternate;
+    animation: animated-typing2 2s steps(40, end),
+      blink 0.5s step-end infinite alternate;
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+
+  @-webkit-keyframes animated-typing {
+    0% {
+      width: 0;
+    }
+    99.9% {
+      border-right: 0.15em solid rgba(0, 255, 0, 0.75);
+    }
+    100% {
+      border: none;
+    }
+  }
+
+  @keyframes animated-typing {
+    0% {
+      width: 0;
+    }
+    99.9% {
+      border-right: 0.15em solid rgba(0, 255, 0, 0.75);
+    }
+    100% {
+      border: none;
+    }
+  }
+
+  @-webkit-keyframes animated-typing2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes animated-typing2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  span {
+    color: white;
+    text-shadow: 2px 2px 8px darkblue;
+  }
+
+  ul {
+    margin-top: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+  }
+}
+
+//---------------------------------ABOUT----------------------------------/
+#about {
+  text-align: left;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 400;
+  background-color: #f9f9f9;
+
+  .p-style {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding: 2.5rem 0 1rem 0;
+  }
+
+  .p-style p:first-child,
+  .p-style p:nth-child(2) {
+    margin-bottom: 1rem;
+  }
+
+  .p-style p:nth-child(3) {
+    padding-bottom: 4rem;
+  }
+
+  .a-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+
+  .about-info {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .icon-skills {
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+  }
+}
+
+//---------------------------------PROJECTS----------------------------------/
+#projects {
+  width: 100%;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 700;
+
+  header {
+    margin-bottom: 5rem;
+  }
+
+  .proj-container {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-gap: 1rem;
+
+    div {
+      color: white;
+      text-align: center;
+      padding-top: 50%;
+
+      h3 {
+        font-size: 1.3rem;
+        background-color: black;
+      }
+
+      p {
+        margin-bottom: 2rem;
+        font-weight: 700;
+        background-color: $tertiaryColor;
+      }
+
+      ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  section::before {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+  }
+
+  section {
+    display: -ms-grid;
+    display: grid;
+    border-radius: 0.3rem;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
+  section::before,
+  h3,
+  div {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .proj-overlay {
+    background-color: lightblue;
+    border-radius: 0.3rem;
+    color: white;
+    text-align: center;
+    padding-top: 50%;
+    font-size: 1.3rem;
+    opacity: 0.9;
+  }
+
+  #firstProject {
+    background-image: url("../images/handshake.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .proj-overlay1 {
+    background-color: lightblue;
+  }
+
+  #secondProject {
+    background-image: url("../images/handshake.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .proj-overlay2 {
+    background-color: lightcoral;
+  }
+
+  .proj-content {
+    //display: none;
+    opacity: 0;
+  }
+}
+//---------------------------------QUESTION----------------------------------/
+#question {
+  width: 100%;
+  height: 100%;
+
+  .xy-padding-quest {
+    padding: 4.5rem 15% 4.5rem 15%;
+  }
+
+  .overlay {
+    background-color: rgba(64, 200, 224, 0.7);
+    position: relative;
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 4em;
+    -webkit-transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    transform: rotate(7deg);
+    margin-bottom: 3.5rem;
+    text-align: center;
+  }
+
+  ul {
+    margin-bottom: 6rem;
+  }
+
+  li {
+    float: right;
+    margin-right: 40%;
+  }
+}
+
+.quest-background {
+  background-image: url("../images/handshake.png");
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+//---------------------------------MEDIA QUERIES----------------------------------/
+@media (max-width: $lg) {
+  #cover {
+    padding-top: 45vh;
+
+    h1 {
+      font-size: 3rem;
+    }
+    .typewriter h1:nth-child(1) {
+      width: 33rem;
+    }
+
+    .typewriter h1:nth-child(2) {
+      width: 35rem;
+    }
+  }
+
+  #about {
+    .a-container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .x-padding-cover {
+    padding-right: 15%;
+  }
+
+  #cover {
+    padding-top: 40vh;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .typewriter h1:nth-child(1) {
+      width: 28rem;
+    }
+
+    .typewriter h1:nth-child(2) {
+      width: 29rem;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  #cover {
+    h1 {
+      font-size: 2.1rem;
+    }
+
+    .typewriter h1:nth-child(1) {
+      width: 23rem;
+    }
+
+    .typewriter h1:nth-child(2) {
+      width: 24.3rem;
+    }
+  }
+
+  .xy-padding {
+    padding-right: 15%;
+  }
+}
+
+@media (max-width: $xs) {
+  #cover {
+    padding-top: 40vh;
+
+    .typewriter h1:nth-child(1) {
+      width: 25rem;
+    }
+
+    .typewriter h1:nth-child(2) {
+      width: 26.5rem;
+    }
+
+    ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
