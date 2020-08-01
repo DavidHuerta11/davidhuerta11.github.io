@@ -75,7 +75,7 @@ function setEventListeners() {
     // Create nested array for projects section
     const projValues = [
       {
-        title: "PYTHON PROJECT",
+        title: "AMAZON AUTOMATION",
         class1: "proj-overlay",
         class2: "proj-overlay1",
       },
