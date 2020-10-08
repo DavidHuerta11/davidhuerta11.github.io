@@ -55,7 +55,7 @@
 //---------------------------------COVER----------------------------------/
 #cover {
   //background-color: $primaryColor;
-  background-image: url("../images/turquoise-lignes.jpg");
+  background-image: url("../images/martin-adams.jpg");
   //background-image: url("../images/fondo-azul.jpg");
   background-size: cover;
   background-position: left center;
@@ -73,7 +73,7 @@
   }
 
   .typewriter h1 {
-    border-right: 0.08em solid rgba(0, 255, 0, 0.75);
+    border-right: 0.08em solid rgba(245, 184, 71, 0.911);
     white-space: nowrap;
     overflow: hidden;
   }
@@ -104,7 +104,7 @@
       width: 0;
     }
     99.9% {
-      border-right: 0.15em solid rgba(0, 255, 0, 0.75);
+      border-right: 0.15em solid rgba(245, 184, 71, 0.911);
     }
     100% {
       border: none;
@@ -116,7 +116,7 @@
       width: 0;
     }
     99.9% {
-      border-right: 0.15em solid rgba(0, 255, 0, 0.75);
+      border-right: 0.15em solid rgba(245, 184, 71, 0.911);
     }
     100% {
       border: none;
@@ -159,9 +159,9 @@
     }
   }
 
-  span {
+  .highlight {
     color: white;
-    text-shadow: 2px 2px 8px darkblue;
+    text-shadow: 2px 2px 8px black;
   }
 
   ul {
