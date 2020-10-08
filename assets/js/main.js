@@ -20,6 +20,7 @@ function setEventListeners() {
     const projContainer = document.querySelector(".proj-container");
     const firstProject = projContainer.querySelector("#firstProject");
     const secondProject = projContainer.querySelector("#secondProject");
+    const thirdProject = projContainer.querySelector("#thirdProject");
 
     // Create nested objects with values needed to alter html
     const styleItems = {
@@ -84,6 +85,11 @@ function setEventListeners() {
         class1: "proj-overlay",
         class2: "proj-overlay2",
       },
+      {
+        title: "PHOTOGRAPHY WEBSITE",
+        class1: "proj-overlay",
+        class2: "proj-overlay3",
+      },
     ];
 
     // Check width of browser for page load, toggle h1 animation or not
@@ -120,6 +126,12 @@ function setEventListeners() {
     });
     secondProject.addEventListener("mouseout", () => {
       toggleProject("mouseout", secondProject, projValues[1]);
+    });
+    thirdProject.addEventListener("mouseover", () => {
+      toggleProject("mouseover", thirdProject, projValues[2]);
+    });
+    thirdProject.addEventListener("mouseout", () => {
+      toggleProject("mouseout", thirdProject, projValues[2]);
     });
   } catch (error) {
     throw {
