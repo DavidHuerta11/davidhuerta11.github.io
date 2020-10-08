@@ -249,7 +249,7 @@
       p {
         margin-bottom: 2rem;
         font-weight: 700;
-        background-color: $tertiaryColor;
+        background-color: black;
       }
 
       ul {
@@ -296,7 +296,6 @@
   }
 
   .proj-overlay {
-    background-color: lightblue;
     border-radius: 0.3rem;
     color: white;
     text-align: center;
@@ -306,14 +305,15 @@
   }
 
   #firstProject {
-    background-image: url("../images/handshake.png");
+    //background-image: url("../images/handshake.png");
+    background-image: url("../images/AA_Gif.gif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
 
   .proj-overlay1 {
-    background-color: lightblue;
+    background-color: plum;
   }
 
   #secondProject {
@@ -324,6 +324,17 @@
   }
 
   .proj-overlay2 {
+    background-color: lightblue;
+  }
+
+  #thirdProject {
+    background-image: url("../images/PS_Gif.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .proj-overlay3 {
     background-color: lightcoral;
   }
 
