@@ -81,7 +81,7 @@ function setEventListeners() {
         class2: "proj-overlay1",
       },
       {
-        title: "REACT PROJECT",
+        title: "PERN TO DO LIST",
         class1: "proj-overlay",
         class2: "proj-overlay2",
       },
@@ -154,7 +154,6 @@ function setEventActions(eventType, eventItems) {
 
       case "click":
         if (eventItems["name"] === "learnMore") {
-          //smoothScroll(eventItems["element"], eventItems["duration"]);
         } else if (eventItems["name"] === "touch") {
           touchCount++;
           modifyContactSection(eventItems["list"], eventItems["headers"]);
@@ -199,44 +198,6 @@ function navStyleSwitch(styleItems) {
   styleItems["element"].style.paddingBottom = styleItems["padding"];
   styleItems["element"].style.boxShadow = styleItems["border"];
   styleItems["element"].style.transition = styleItems["transition"];
-}
-
-function smoothScroll(target, duration) {
-  /* Smooth scrolling from a click event */
-  try {
-    let targetPosition = target.getBoundingClientRect().top;
-    let startPosition = pageYOffset; //window.pageYOffset || window.scrollY;
-    let distance = Math.abs(targetPosition - startPosition);
-
-    let startTime = null;
-
-    function loop(currentTime) {
-      if (startTime === null) {
-        startTime = currentTime;
-      }
-
-      let timeElapsed = currentTime - startTime;
-      let run = ease(timeElapsed, startPosition, distance, duration);
-      window.scrollTo(0, run);
-
-      if (timeElapsed < duration) {
-        requestAnimationFrame(loop);
-      }
-    }
-
-    function ease(t, b, c, d) {
-      t /= d / 2;
-      if (t < 1) return (c / 2) * t * t + b;
-      t--;
-      return (-c / 2) * (t * (t - 2) - 1) + b;
-    }
-
-    requestAnimationFrame(loop);
-  } catch (error) {
-    throw {
-      message: 'Method: smoothScroll(), Exception: "' + error.message + '"',
-    };
-  }
 }
 
 function navSlider(element, element2, element3, transition) {
