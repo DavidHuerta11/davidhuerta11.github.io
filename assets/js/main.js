@@ -21,6 +21,7 @@ function setEventListeners() {
     const firstProject = projContainer.querySelector("#firstProject");
     const secondProject = projContainer.querySelector("#secondProject");
     const thirdProject = projContainer.querySelector("#thirdProject");
+    const fourthProject = projContainer.querySelector("#fourthProject");
 
     // Create nested objects with values needed to alter html
     const styleItems = {
@@ -81,14 +82,19 @@ function setEventListeners() {
         class2: "proj-overlay1",
       },
       {
-        title: "PERN TO DO LIST",
+        title: "HAPPY CAMPING",
         class1: "proj-overlay",
         class2: "proj-overlay2",
       },
       {
-        title: "PHOTOGRAPHY WEBSITE",
+        title: "PERN TO DO LIST",
         class1: "proj-overlay",
         class2: "proj-overlay3",
+      },
+      {
+        title: "PHOTOGRAPHY WEBSITE",
+        class1: "proj-overlay",
+        class2: "proj-overlay4",
       },
     ];
 
@@ -132,6 +138,12 @@ function setEventListeners() {
     });
     thirdProject.addEventListener("mouseout", () => {
       toggleProject("mouseout", thirdProject, projValues[2]);
+    });
+    fourthProject.addEventListener("mouseover", () => {
+      toggleProject("mouseover", fourthProject, projValues[3]);
+    });
+    fourthProject.addEventListener("mouseout", () => {
+      toggleProject("mouseout", fourthProject, projValues[3]);
     });
   } catch (error) {
     throw {
