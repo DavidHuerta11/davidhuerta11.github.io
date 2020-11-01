@@ -313,28 +313,39 @@
   }
 
   .proj-overlay1 {
-    background-color: plum;
+    background-color: lightblue;
   }
 
   #secondProject {
-    background-image: url("../images/PERN_Todo_Gif.gif");
+    background-image: url("../images/Happy_Camping_Gif.gif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
 
   .proj-overlay2 {
-    background-color: lightblue;
+    background-color: lightgreen;
   }
 
   #thirdProject {
-    background-image: url("../images/PS_Gif.gif");
+    background-image: url("../images/PERN_Todo_Gif.gif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
 
   .proj-overlay3 {
+    background-color: plum;
+  }
+
+  #fourthProject {
+    background-image: url("../images/PS_Gif.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .proj-overlay4 {
     background-color: lightcoral;
   }
 
