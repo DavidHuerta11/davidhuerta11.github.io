@@ -166,9 +166,16 @@
   border-radius: 0.2rem;
 }
 
-.hollow-2 {
+.hollow-2,
+.hollow-3 {
   border: 2px solid black;
   border-radius: 0.2rem;
+}
+
+.hollow-4 {
+  border: 2px solid white;
+  border-radius: 0.2rem;
+  color: white;
 }
 
 .solid:hover {
@@ -190,6 +197,22 @@
   transform: scale(1.1);
 
   .night-text {
+    color: $secondaryColor;
+  }
+}
+
+.hollow-3:hover {
+  border-color: $secondaryColor;
+
+  .dark-text-2 {
+    color: $secondaryColor;
+  }
+}
+
+.hollow-4:hover {
+  border-color: $secondaryColor;
+
+  .light-text {
     color: $secondaryColor;
   }
 }
